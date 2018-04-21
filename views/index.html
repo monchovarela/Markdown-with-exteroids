@@ -1,0 +1,165 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Glitch!</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="/editor.css">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    
+    <header>
+      <button onclick="renderHtml(editor.getValue())">Render</button>
+      <button onclick="printFrame()">Print</button>
+      <button onclick="saveFile()">Save</button>
+      
+      <script src="https://button.glitch.me/button.js"></script>
+      <div class="glitchButton" style="height:50px"></div>
+    </header>
+    <main>
+      <textarea id="content" cols="30" rows="10">
+## Markdown with esteroids
+
+---
+
+**Buttons:**
+
+[button type='primary'] button [/button]
+[button type='secondary'] button [/button]
+[button type='success'] button [/button]
+[button type='warning'] button [/button]
+[button type='danger'] button [/button]
+[button type='dark'] button [/button]
+
+
+
+
+**Grids:**
+
+[row]
+  [col num=6]
+### hola
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias iste ipsam quia repellat omnis iusto, eaque dolorum dignissimos facilis doloribus hic aliquid natus maxime in, quam odio cupiditate.
+  [/col]
+  [col num=6]
+### hola
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias iste ipsam quia repellat omnis iusto, eaque dolorum dignissimos facilis doloribus hic aliquid natus maxime in, quam odio cupiditate.
+  [/col]
+[/row]
+
+
+
+
+[row class='bg-dark text-light']
+  [col num=4]
+### hola
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias iste ipsam quia repellat omnis iusto
+  [/col]
+  [col num=4]
+### hola
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias iste ipsam quia repellat omnis iusto
+  [/col]
+  [col num=4]
+### hola
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias iste ipsam quia repellat omnis iusto
+  [/col]
+[/row]
+
+
+
+
+
+[row]
+  [col num=4 class='bg-success text-light']
+### hola
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias iste ipsam quia repellat omnis iusto
+  [/col]
+  [col num=4 class='bg-info text-dark']
+### hola
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias iste ipsam quia repellat omnis iusto
+  [/col]
+  [col num=4 class='bg-primary text-light']
+### hola
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias iste ipsam quia repellat omnis iusto
+  [/col]
+[/row]
+
+
+
+
+
+
+**Cards:**
+
+[row]
+  [col num=6]
+    [card 
+      title='Card One' 
+      img='//via.placeholder.com/350x150'] 
+     This is a simple card with image
+   [/card]
+  [/col]
+  [col num=6]
+   [card 
+      title='Card Two' 
+      img='//via.placeholder.com/350x150'] 
+     This is a simple card with image
+   [/card]
+  [/col]
+[/row]
+
+
+
+
+
+**Colors:**
+
+[color name=orange] Orange [/color]
+[blue] Blue [/blue]
+[red] Red [/red]
+[green] Green [/green]
+[yellow] Yellow [/yellow]
+[pink] Pink [/pink]
+
+
+
+
+---
+
+
+**Youtube videos:**
+
+[youtube id='WVwe8iATKjA' class=iframe]
+
+---
+
+**Notes:**
+
+[note] text here [/note]
+
+[note class='bg-dark text-white p-2']
+ text here 
+[/note]
+
+      </textarea>
+      <iframe id="preview" src="./preview" frameborder="0"></iframe>
+    </main>
+
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.3.5/split.min.js"></script>
+    <script src="/editor.js"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
