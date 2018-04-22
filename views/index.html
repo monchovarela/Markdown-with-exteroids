@@ -11,23 +11,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-    <link rel="stylesheet" href="/editor.css">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet/editor.css"/>
+    <link rel="stylesheet" href="stylesheet/style.css"/>
   </head>
   <body>
     
     <header>
-      <button onclick="renderHtml(editor.getValue())">Render</button>
-      <button onclick="printFrame()">Print</button>
-      <button onclick="saveFile()">Save</button>
-      
+      <button onclick="renderHtml(editor.getValue())"><i class="fas fa-sync"></i> Render</button>
+      <button onclick="printFrame()"><i class="fas fa-print"></i> Print</button>
+      <button onclick="saveFile()"><i class="fas fa-download"></i> Save Html</button>
+      <button onclick="saveFileMd()"><i class="fas fa-download"></i> Save Md</button>
+      <select id="selectTmpl" onchange="return getFile()"></select>
       <script src="https://button.glitch.me/button.js"></script>
       <div class="glitchButton" style="height:50px"></div>
     </header>
     <main>
-      <textarea id="content" cols="30" rows="10">
-## Markdown with esteroids
+      <textarea id="content" cols="30" rows="10">## Markdown with esteroids
 
 ---
 
@@ -41,7 +42,7 @@
 [button type='dark'] button [/button]
 
 
-
+[space]
 
 **Grids:**
 
@@ -57,7 +58,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias 
 [/row]
 
 
-
+[space]
 
 [row class='bg-dark text-light']
   [col num=4]
@@ -75,7 +76,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias 
 [/row]
 
 
-
+[space]
 
 
 [row]
@@ -95,7 +96,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias 
 
 
 
-
+[space]
 
 
 **Cards:**
@@ -119,7 +120,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias 
 
 
 
-
+[space]
 
 **Colors:**
 
@@ -132,15 +133,17 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias 
 
 
 
-
----
+[space]
 
 
 **Youtube videos:**
 
 [youtube id='WVwe8iATKjA' class=iframe]
 
----
+
+
+[space]
+
 
 **Notes:**
 
@@ -150,6 +153,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias 
  text here 
 [/note]
 
+      
       </textarea>
       <iframe id="preview" src="./preview" frameborder="0"></iframe>
     </main>
@@ -158,8 +162,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.3.5/split.min.js"></script>
-    <script src="/editor.js"></script>
-    <script src="/client.js"></script>
+    <script src="javascript/editor.js"></script>
+    <script src="javascript/client.js"></script>
 
   </body>
 </html>

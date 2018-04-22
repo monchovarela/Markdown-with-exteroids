@@ -1,0 +1,20 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { position: relative; height: 100%; }
+body { overflow: hidden; font-family: "Consolas", monospace; font-size: 13px; font-weight: 500; line-height: 1.5; height: 100%; }
+main { position: fixed; top: 50px; left: 0; height: 100%; width: 100%; }
+textarea, iframe, .CodeMirror { width: calc(100%/2); float: left; height: calc(100% - 50px); border: none; }
+textarea, .CodeMirror { resize: none; padding: 1em; transition: background 400ms ease; }
+.CodeMirror { padding: 0; }
+textarea:focus { outline: none; background: #f5f5f5; transition: background 400ms ease; }
+.split, .split-flex { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; overflow-y: auto; overflow-x: hidden; }
+.gutter { background-color: #eee; background-repeat: no-repeat; background-position: 50%; }
+.gutter.gutter-horizontal { cursor: ew-resize; }
+.gutter.gutter-vertical { cursor: ns-resize; }
+.split.split-horizontal, .gutter.gutter-horizontal { height: 100%; float: left; }
+header { height: 50px; background: #fcfcff; border-bottom: 1px solid #c7c7c7; line-height: 50px; padding: 0 1em; color: #333; }
+button { padding: 0.4em 0.8em; background: white; color: black; border: 1px solid black; transition: all 500ms ease; }
+button:hover, button:focus, button:active { background: black; color: #f9f9f9; border: 1px solid black; transition: all 500ms ease; }
+select { padding: 0.27em; width: 160px; border: 1px solid black; color: black; transition: all 400ms ease; }
+select:hover, select:focus { background: black; color: white; transition: all 400ms ease; }
+.glitchButton { height: 46px; display: block; width: 90px; float: right; margin-top: 4px; }
+.glitchOpenWindowElement{z-index:999;}
