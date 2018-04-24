@@ -12,9 +12,11 @@ textarea:focus { outline: none; background: #f5f5f5; transition: background 400m
 .gutter.gutter-vertical { cursor: ns-resize; }
 .split.split-horizontal, .gutter.gutter-horizontal { height: 100%; float: left; }
 header { height: 50px; background: #fcfcff; border-bottom: 1px solid #c7c7c7; line-height: 50px; padding: 0 1em; color: #333; }
-button { padding: 0.4em 0.8em; background: white; color: black; border: 1px solid black; transition: all 500ms ease; }
-button:hover, button:focus, button:active { background: black; color: #f9f9f9; border: 1px solid black; transition: all 500ms ease; }
+header button, header a { padding: 0.4em 0.8em; background: white; color: black; border: 1px solid black; transition: all 500ms ease; }
+header a:hover,header a:focus,header button:hover, header button:focus, header button:active { background: black; color: #f9f9f9; border: 1px solid black; transition: all 500ms ease; }
 select { padding: 0.27em; width: 160px; border: 1px solid black; color: black; transition: all 400ms ease; }
 select:hover, select:focus { background: black; color: white; transition: all 400ms ease; }
 .glitchButton { height: 46px; display: block; width: 90px; float: right; margin-top: 4px; }
 .glitchOpenWindowElement{z-index:999;}
+
+.active-external-screen,.active-full-screen-editor{background:blue;border-color:blue;color:white;}

@@ -2,10 +2,12 @@ let express = require('express');
 let app = express();
 let fs = require('fs');
 let bodyParser = require("body-parser");
-let marked = require('marked');
 let shortcode = require('shortcode-parser');
 let shortcodes = require(__dirname+'/public/javascript/shortcodes.js')();
 
+
+let md = require('markdown-it')().use(require('markdown-it-footnote'));
+ 
 
 // use public folder
 app.use(express.static('public'));
@@ -52,14 +54,13 @@ app.get("/template", function (req, res) {
 
 // render
 app.post("/render", function (req, res) {
-  let data = marked(req.body.html).replace(/&#39;/g,'"');
+  let data = md.render(req.body.html).replace(/&#39;/g,'"');
   let result = shortcode.parse(data);
   res.send(result);
 });
 
-const local = true;
+const local = false;
 let port = 5000;
-
 if(!local) port = process.env.PORT;
 
 // listen for requests :)

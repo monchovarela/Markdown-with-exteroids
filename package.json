@@ -8,18 +8,20 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
-    "marked": "^0.3.19",
-    "shortcode-parser": "^0.0.1"
+    "shortcode-parser": "^0.0.1",
+    "markdown-it": "^8.4.1",
+    "markdown-it-footnote": "^3.0.1"
   },
   "engines": {
     "node": "9.x"
   },
   "repository": {
-    "url": "https://github.com/monchovarela/Markdown-with-exteroids"
+    "url": "https://glitch.com/edit/#!/my-glitch-app"
   },
   "license": "MIT",
   "keywords": [
     "node",
+    "glitch",
     "express"
   ]
 }

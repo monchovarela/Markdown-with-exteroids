@@ -19,140 +19,38 @@
   <body>
     
     <header>
-      <button onclick="renderHtml(editor.getValue())"><i class="fas fa-sync"></i> Render</button>
-      <button onclick="printFrame()"><i class="fas fa-print"></i> Print</button>
-      <button onclick="saveFile()"><i class="fas fa-download"></i> Save Html</button>
-      <button onclick="saveFileMd()"><i class="fas fa-download"></i> Save Md</button>
+      <button onclick="renderHtml(editor.getValue())">
+        <i class="fas fa-sync"></i> Render</button>
+      <button onclick="printFrame()" title="Print">
+        <i class="fas fa-print"></i></button>
+      <button onclick="saveFile()" title="Save Html file">
+        <i class="fas fa-download"></i> Html</button>
+      <button onclick="saveFileMd()" title="Save to Markdown file">
+        <i class="fas fa-download"></i> Md</button>
       <select id="selectTmpl" onchange="return getFile()"></select>
+      <button id="toggleFullEditor" onclick="toggleFullEditor()" title="Full screen editor">
+        <i class="fas fa-expand"></i></button>
+      <button onclick="externalWindow()" title="Open on external window">
+        <i class="fas fa-external-link-alt"></i></button>
+      
       <script src="https://button.glitch.me/button.js"></script>
       <div class="glitchButton" style="height:50px"></div>
     </header>
     <main>
-      <textarea id="content" cols="30" rows="10">## Markdown with esteroids
-
----
-
-**Buttons:**
-
-[button type='primary'] button [/button]
-[button type='secondary'] button [/button]
-[button type='success'] button [/button]
-[button type='warning'] button [/button]
-[button type='danger'] button [/button]
-[button type='dark'] button [/button]
+      <textarea id="content" cols="30" rows="10">## Markdown + Exteroids
 
 
-[space]
+**Description:**
 
-**Grids:**
-
-[row]
-  [col num=6]
-### hola
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias iste ipsam quia repellat omnis iusto, eaque dolorum dignissimos facilis doloribus hic aliquid natus maxime in, quam odio cupiditate.
-  [/col]
-  [col num=6]
-### hola
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias iste ipsam quia repellat omnis iusto, eaque dolorum dignissimos facilis doloribus hic aliquid natus maxime in, quam odio cupiditate.
-  [/col]
-[/row]
+When you need an editor with Markdown but you need add a grid or buttons or custom blocks this is  for you, simple and usefull.
 
 
-[space]
-
-[row class='bg-dark text-light']
-  [col num=4]
-### hola
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias iste ipsam quia repellat omnis iusto
-  [/col]
-  [col num=4]
-### hola
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias iste ipsam quia repellat omnis iusto
-  [/col]
-  [col num=4]
-### hola
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias iste ipsam quia repellat omnis iusto
-  [/col]
-[/row]
+**Installation:**
 
 
-[space]
-
-
-[row]
-  [col num=4 class='bg-success text-light']
-### hola
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias iste ipsam quia repellat omnis iusto
-  [/col]
-  [col num=4 class='bg-info text-dark']
-### hola
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias iste ipsam quia repellat omnis iusto
-  [/col]
-  [col num=4 class='bg-primary text-light']
-### hola
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aspernatur alias iste ipsam quia repellat omnis iusto
-  [/col]
-[/row]
-
-
-
-[space]
-
-
-**Cards:**
-
-[row]
-  [col num=6]
-    [card 
-      title='Card One' 
-      img='//via.placeholder.com/350x150'] 
-     This is a simple card with image
-   [/card]
-  [/col]
-  [col num=6]
-   [card 
-      title='Card Two' 
-      img='//via.placeholder.com/350x150'] 
-     This is a simple card with image
-   [/card]
-  [/col]
-[/row]
-
-
-
-[space]
-
-**Colors:**
-
-[color name=orange] Orange [/color]
-[blue] Blue [/blue]
-[red] Red [/red]
-[green] Green [/green]
-[yellow] Yellow [/yellow]
-[pink] Pink [/pink]
-
-
-
-[space]
-
-
-**Youtube videos:**
-
-[youtube id='WVwe8iATKjA' class=iframe]
-
-
-
-[space]
-
-
-**Notes:**
-
-[note] text here [/note]
-
-[note class='bg-dark text-white p-2']
- text here 
-[/note]
-
+	git clone https://github.com/monchovarela/Markdown-with-exteroids
+	cd  Markdown-with-exteroids
+	npm start
       
       </textarea>
       <iframe id="preview" src="./preview" frameborder="0"></iframe>

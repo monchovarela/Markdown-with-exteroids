@@ -23,5 +23,16 @@ table{width:100%;margin:2em auto}pre{background:#EEEEEE;color:#000000;padding:1e
       </div>
     </main>
 
+    <script>
+      window.addEventListener('message', function(event) {
+        var recive = JSON.parse(event.data);
+        document.querySelector('main').innerHTML = 'Recive data please wait...';
+        let w = setTimeout(() => {
+          document.querySelector('main').innerHTML = recive.body;
+          event.source.postmessage('Ready','*');
+          clearTimeout(w);
+        },500);        
+      });
+    </script>
   </body>
 </html>
