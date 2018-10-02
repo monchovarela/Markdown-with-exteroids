@@ -11,8 +11,8 @@ When you need an editor with Markdown but you need add a grid or buttons or cust
 **Installation:**
 
 
-	git clone https://github.com/monchovarela/Markdown-with-exteroids
-	cd  Markdown-with-exteroids
+	git clone https://github.com/monchovarela/markdroids.git
+	cd  markdroids
 	npm start
   
 
